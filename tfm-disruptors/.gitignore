@@ -1,0 +1,22 @@
+# ===== Datos (no versionar) =====
+data/**
+!data/README.md
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ===== Entornos virtuales =====
+tfm_env/
+.venv/
+venv/
+env/
+
+# ===== Cachés y basura habitual =====
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+*.log
+
+# (opcional) variables locales
+.env
