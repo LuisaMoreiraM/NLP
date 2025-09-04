@@ -15,7 +15,6 @@ def cargar_entity_ruler():
     # Base del proyecto: dos niveles arriba desde este archivo
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     processed_dir = os.path.join(base_dir, "data", "processed")
-    #nlp_dir = os.path.join(base_dir, "data", "nlp")
 
     # Leemos los datos de la lista de disruptores_final
     disruptores_final = pd.read_parquet(os.path.join(processed_dir, "disruptores_final.parquet"))

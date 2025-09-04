@@ -44,24 +44,24 @@ tfm-disruptors/
 
 ## 4. Notebooks (IMPORTANTE)
 En `notebooks/` están los cuadernos de exploración (`etl/`, `nlp/`, `ocr/`). Aquí se implementó inicialmente todo el código que después se migró y modularizó en `src/`.  
-En la carpeta nlp se encuentran los documentos donde se pone a prueba el modelo y el **único** sitio donde se puede realizar esta consulta:  
+En la carpeta nlp/ se encuentran los documentos donde se pone a prueba el modelo y es el **único** sitio donde se puede realizar esta consulta:  
 
-1. **NLP_entity_ruler:** es donde se crea el modelo y se evalua con texto puro y texto proveniente de lectura de imagenes. Posterioremente se migra solo la parte del modelo al script nlp_entityruler  
+1. **NLP_entity_ruler:** es donde se crea el modelo y se evalua con texto puro y texto proveniente de lectura de imágenes. Posterioremente, se migra solo la parte del modelo al script `nlp_entityruler`  
 
-2. **NLP_analisis_beauty:** aquí se pone a prueba el modelo importando solo los patrones ya creados en el notebook anterior. La prueba se realiza sobre un dataset heterogeneo de 16.000 registros válidos para poner a prueba los resultados que saca, pero no se dispone de métodos de evaluación.  
+2. **NLP_analisis_beauty:** aquí se pone a prueba el modelo importando solo los patrones ya creados en el notebook anterior. La prueba se realiza sobre un dataset heterogéneo de 16.000 registros válidos para poner a prueba los resultados que saca, pero no se dispone de métodos de evaluación.  
 
 Los notebooks están redactados paso a paso (qué se hace y por qué) para garantizar trazabilidad metodológica y facilitar su revisión. 
 
 
 ## 5. Reproducibilidad
-- **Demo rápida (app.py):** usa `data/processed/disruptores_final.parquet` (incluido) y, opcionalmente, `data/raw/etiquetas/` (incluido) o tus propias imágenes.
+- **Demo rápida (app.py):** usa `data/processed/disruptores_final.parquet` (incluido) y para imágenes `data/raw/etiquetas/` (incluido) si son propias mételas en esta carpeta o cambia la ruta del archivo `ocr_proccess`
 
-- **Demo rápida (Streamlit):** usa `entity_ruler_patterns.jsonl` (incluido), `data/processed/disruptores_final.parquet` (incluido) y, opcionalmente, `data/raw/etiquetas/` (incluido) o tus propias imágenes.
+- **Demo rápida (Streamlit):** usa `entity_ruler_patterns.jsonl` (incluido), `data/processed/disruptores_final.parquet` (incluido) y para imágenes `data/raw/etiquetas/` (incluido) si son propias mételas en esta carpeta o cambia la ruta del archivo `ocr_proccess`
 
 - **Reconstrucción completa con ETL incluida**:
-  1) Descarga de la repo la carpeta data completa.
-  2) En `app.py`, **descomenta** el bloque de ETL para generar todos los arcvhivos de `data/processed/` (incluido `disruptores_final.parquet`).
-  4) Ejecuta `python app.py` o lanza la UI de Streamlit.
+  1) Descarga del repositorio la carpeta data completa.
+  2) En `app.py`, **descomenta** el bloque de ETL para generar todos los archivos de `data/processed/` (incluido `disruptores_final.parquet`).
+  3) Ejecuta `python app.py` o lanza la UI de Streamlit.
 
 
 ## 6. Instalación y ejecución
