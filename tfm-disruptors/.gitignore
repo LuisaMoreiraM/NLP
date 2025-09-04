@@ -1,8 +1,9 @@
-# ===== Datos (no versionar) =====
-data/**
-!data/README.md
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+# ===== Datos =====
+# Incluir data/raw (no se ignora nada ahí)
+# Ignorar TODO lo generado en data/processed...
+data/processed/**
+# ...excepto el fichero de demo
+!data/processed/disruptores_final.parquet
 
 # ===== Entornos virtuales =====
 tfm_env/
@@ -14,9 +15,5 @@ env/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
-.DS_Store
-Thumbs.db
 *.log
 
-# (opcional) variables locales
-.env
