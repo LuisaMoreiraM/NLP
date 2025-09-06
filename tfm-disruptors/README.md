@@ -54,12 +54,15 @@ Los notebooks están redactados paso a paso (qué se hace y por qué) para garan
 
 
 ## 5. Reproducibilidad
+De las opciones que se brindan recomiendo las demos, simplemente porque la recontrucción completa no tiene mucho sentido, de todas formas, se indica como hacerlo.
+
 - **Demo rápida (app.py):** usa `data/processed/disruptores_final.parquet` (incluido) y para imágenes `data/raw/etiquetas/` (incluido) si son propias mételas en esta carpeta o cambia la ruta del archivo `ocr_proccess`
 
 - **Demo rápida (Streamlit):** usa `entity_ruler_patterns.jsonl` (incluido), `data/processed/disruptores_final.parquet` (incluido) y para imágenes `data/raw/etiquetas/` (incluido) si son propias mételas en esta carpeta o cambia la ruta del archivo `ocr_proccess`
 
 - **Reconstrucción completa con ETL incluida**:
-  1) Descarga del repositorio la carpeta data completa.
+Es importante saber que al final del proceso del ETL, se recurrió a la introducción manual de datos, añadiendo también columnas con información necesaria para la evaluación. Por ese motivo, son importantes también los archivos incluidos en data/processed/notebooks/consultas manuales, sin ellos el archivo disruptores_final no se puede crear.  Por lo tanto, para poder replicar todo desde cero, hay que seguir los siguientes pasos:
+  1) Descarga de la carpeta **data** completa.
   2) En `app.py`, **descomenta** el bloque de ETL para generar todos los archivos de `data/processed/` (incluido `disruptores_final.parquet`).
   3) Ejecuta `python app.py` o lanza la UI de Streamlit.
 
