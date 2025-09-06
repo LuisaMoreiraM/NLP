@@ -1,9 +1,16 @@
 # ===== Datos =====
-# Incluir data/raw (no se ignora nada ahí)
-# Ignorar TODO lo generado en data/processed...
-data/processed/**
-# ...excepto el fichero de demo
-!data/processed/disruptores_final.parquet
+# Ignora TODO lo generado en data/processed...
+/data/processed/*
+
+# pero incluye los artefactos necesarios para demo y evaluación:
+!/data/processed/disruptores_final.parquet
+!/data/processed/disruptores_final.xlsx
+
+# Re-incluye las carpetas intermedias y los dos Excel manuales necesarios para demo
+!/data/processed/notebooks/
+!/data/processed/notebooks/consultas_manuales/
+!/data/processed/notebooks/consultas_manuales/disruptores_etiqueta_manual.xlsx
+!/data/processed/notebooks/consultas_manuales/disruptores_sin_etiqueta_manual.xlsx
 
 # ===== Entornos virtuales =====
 tfm_env/
