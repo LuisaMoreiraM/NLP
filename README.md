@@ -6,7 +6,7 @@ El primer proyecto que podrás ver está en `tfm-disruptors` donde comparto el c
 
 Mi objetivo es desarrollar más este proyecto porque tiene mucho recorrido.
 
-El proyecto inicial ha sido desarrollado en Python y las librerias utilizadas están en el requirement del proyecto, no obstaante dejo por aquí un listado de la más destacadas:
+El proyecto inicial ha sido desarrollado en Python y las librerias utilizadas están en el requirement del proyecto, no obstante dejo por aquí un listado de la más destacadas:
 
 * **pandas:** tratamiento de DataFrames y procesos ETL.
 * **numpy:** operaciones numéricas y apoyo en cálculos.
